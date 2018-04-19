@@ -5,19 +5,35 @@
   * @module    test
   * @author    Roderic Linguri <linguri@digices.com>
   * @copyright 2018 Digices LLC
-  * @version   0.0.1
+  * @version   0.0.2
   */
 
 require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php';
 
-echo 'Classes:'.PHP_EOL;
+$id = 1;
 
-print_r(get_declared_classes());
+$posts = \digices\wpdb\Posts::shared();
 
-echo 'Constants:'.PHP_EOL;
+$rows = $posts->fetchRowsByColumn('id',1);
 
-print_r(get_defined_constants());
+if (count($rows) > 0) {
 
-echo 'Functions:'.PHP_EOL;
+  $row = $rows[0];
 
-print_r(get_defined_functions());
+  $post_meta = \digices\wpdb\PostMeta::shared();
+
+  $meta_rows = $post_meta->fetchRowsForPostId($id);
+
+  foreach ($meta_rows as $meta_row) {
+    $k = $meta_row['meta_key'];
+    $v = $meta_row['meta_value'];
+    if ($data = @unserialize($v)) {
+      $row[$k] = $data;
+    } else {
+      $row[$k] = $v;
+    }
+  }
+
+  print_r($row);
+
+}

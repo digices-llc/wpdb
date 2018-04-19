@@ -33,5 +33,8 @@ _3. Edit the file_ `./etc/config.php` _to provide your database connection detai
 
 ### Change Log ###
 
+###### Version 0.0.2 ######
+Add Source files
+
 ###### Version 0.0.1 ######
 Create Project Framework
