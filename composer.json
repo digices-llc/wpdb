@@ -16,6 +16,6 @@
         }
     ],
     "require": {
-        "digices/sqlayr": "dev-master"
+        "digices/sqlayr": ">=0.4.3"
     }
 }
