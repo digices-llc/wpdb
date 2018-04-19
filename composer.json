@@ -1,0 +1,21 @@
+{
+    "name": "digices/wpdb",
+    "description": "MySQL Database Wrapper for WordPress Posts",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roderic Linguri",
+            "email": "rlinguri@digices.com"
+        }
+    ],
+    "repositories": [
+        {
+            "url": "https://github.com/digices-llc/sqlayr",
+            "type": "vcs"
+        }
+    ],
+    "require": {
+        "digices/sqlayr": "dev-master"
+    }
+}
