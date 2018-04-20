@@ -11,7 +11,7 @@
 /** SAMPLE CONFIGURATION FILE **/
 
 /**
-  Provide a fake $wpdb object in case we are running this without WordPress
+* Provide a fake $wpdb object in case we are running this without WordPress
 **/
 
 global $wpdb;
@@ -35,6 +35,52 @@ if (!is_object($wpdb)) {
   $wpdb = new WPDBProxy();
 
 } // ./wpdb is not set
+
+/**
+* Provide empty function definitions in case we are running this without WordPress
+**/
+
+if (!function_exists('register_activation_hook')) {
+  function register_activation_hook() {
+	
+  }
+}
+
+if (!function_exists('register_deactivation_hook')) {
+  function register_deactivation_hook() {
+	
+  }
+}
+
+if (!function_exists('add_action')) {
+  function add_action() {
+	
+  }
+}
+
+if (!function_exists('add_settings_section')) {
+  function add_settings_section() {
+	
+  }
+}
+
+if (!function_exists('add_settings_field')) {
+  function add_settings_field() {
+	
+  }
+}
+
+if (!function_exists('add_menu_page')) {
+  function add_menu_page() {
+	
+  }
+}
+
+if (!function_exists('register_rest_route')) {
+  function register_rest_route() {
+	
+  }
+}
 
 // Make sure wp config constants are defined
 
