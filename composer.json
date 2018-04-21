@@ -17,5 +17,10 @@
     ],
     "require": {
         "digices/sqlayr": ">=0.4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "digices\\wpdb\\": "src"
+        }
     }
 }
