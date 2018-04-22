@@ -5,7 +5,7 @@
   * @module    test
   * @author    Roderic Linguri <linguri@digices.com>
   * @copyright 2018 Digices LLC
-  * @version   0.0.2
+  * @version   0.0.3
   */
 
 require_once dirname(__DIR__).DIRECTORY_SEPARATOR.'autoload.php';
