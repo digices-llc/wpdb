@@ -18,7 +18,7 @@ _1. Include the following in the root level of your composer.json:_
         }
     ],
     "require": {
-        "digices/wpdb": ">=0.6.1"
+        "digices/wpdb": ">=0.6.3"
     }
 }
 
@@ -33,8 +33,11 @@ _3. Edit the file_ `./etc/config.php` _to provide your database connection detai
 
 ### Change Log ###
 
-###### Version 0.0.2 ######
+###### Version 0.6.3 ######
+Prevent db crash if ID less than zero
+
+###### Version 0.6.2 ######
 Add Source files
 
-###### Version 0.0.1 ######
+###### Version 0.6.1 ######
 Create Project Framework

@@ -5,7 +5,7 @@
   * @module    posts
   * @author    Roderic Linguri <rlinguri@digices.com>
   * @copyright Digices LLC
-  * @version   0.0.2
+  * @version   0.6.3
   */
 
 namespace digices\wpdb;
@@ -41,7 +41,17 @@ class Posts extends \digices\sqlayr\Table {
     */
   public function fetchRowsGreaterThanId($id)
   {
-    $sql = "SELECT * FROM `".$this->name."` WHERE `ID` > ".($id - 1).";";
+
+    // make sure id is not a negative number
+    if ($id < 1) {
+      $gt = 0;
+    } // ./id is zero or negative
+    
+    else {
+      $gt = $id - 1;
+    } // ./id is at least 1
+    
+    $sql = "SELECT * FROM `".$this->name."` WHERE `ID` > ".$gt.";";
     if ($res = $this->database->fetch($sql)) {
       return $res;
     } else {
