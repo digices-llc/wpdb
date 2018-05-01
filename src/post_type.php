@@ -5,7 +5,7 @@
   * @module    post_type
   * @author    Roderic Linguri <rlinguri@digices.com>
   * @copyright Digices LLC
-  * @version   0.0.2
+  * @version   0.6.2
   */
 
 namespace digices\wpdb;
